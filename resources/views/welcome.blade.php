@@ -34,7 +34,7 @@
                 <div class="flex justify-center">
                    
                    <ul class="list">
-                       <li class="list-item"><a href="{{ url('about') }}">about</a></li>
+                       <li class="list-item"><a href="{{ route('about.us') }}">about</a></li>
                        <li class="list-item"><a href="{{ URL::to('contact') }}">contact</a></li>
                    </ul>
                 </div>

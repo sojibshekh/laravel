@@ -19,13 +19,24 @@ Route::get('/', function () {
 });
 
 
-Route::get('/about',function(){
+Route::get('/about4444444444',function(){
     return view('about');
-});
+})->name('about.us');
 
 Route::get('/contact',function(){
     return view('contact');
+})->name('contact.us');
+
+Route::get('/user/{id}', function ($id) {
+    return 'User '.$id;
 });
+
+Route::get('/country',function(){
+    return view('country');
+})->middleware('country');
+
+
+// Route::view('/contact','contact');
 
 
 
