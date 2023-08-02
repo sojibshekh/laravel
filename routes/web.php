@@ -49,6 +49,11 @@ Route::get('/test',learnController::class);
 
 Route::post('/student/store',[FirstController::class,'studentStore'])->name('student.store');
 
+// from page 
+Route::get('student',[FirstController::class,'studentFrom'])->name('form.us');
+
+Route::post('store.contact',[FirstController::class,'store'])->name('store.contact');
+
 // Route::post('/server', [FirstController::class,'index']);
 
 

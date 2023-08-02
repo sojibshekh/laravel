@@ -19,4 +19,18 @@ class FirstController extends Controller
     {
         dd($request->all());
     }
+
+    public function studentFrom()
+    {
+        return view('from');
+    }
+
+    public function store(Request $request)
+    {
+                   $validatedData = $request->validate([
+                'name' => ['required','max:255'],
+                'email' => ['required','max:255'],
+                'password' => ['required','min:6'],
+            ]);
+    }
 }

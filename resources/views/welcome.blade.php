@@ -36,6 +36,7 @@
                    <ul class="list">
                        <li class="list-item"><a href="{{ route('about.us') }}">about</a></li>
                        <li class="list-item"><a href="{{ URL::to('contact') }}">contact</a></li>
+                       <li class="list-item"><a href="{{ route('form.us') }}">from</a></li>
                    </ul>
                 </div>
 
