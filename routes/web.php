@@ -57,6 +57,12 @@ Route::post('store.contact',[FirstController::class,'store'])->name('store.conta
 // Route::post('/server', [FirstController::class,'index']);
 
 
+// auth check routes
+Route::get('laravel',function(){
+  return view('laravel');
+})->middleware('auth');
+
+
 
 
 // Route::view('/contact','contact');

@@ -40,6 +40,9 @@
                    </ul>
                 </div>
 
+                @if(Auth::check())
+                <h2>Yes , I am login </h2>
+                @endif
             
             </div>
         </div>
