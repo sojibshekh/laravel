@@ -64,6 +64,14 @@ Route::get('laravel',function(){
 
 
 
+// crud oparetion route 
+
+Route::get('class',[App\Http\Controllers\Admin\CategoryController::class,'index'])->name('class.index');
+Route::get('create/class',[App\Http\Controllers\Admin\CategoryController::class,'create'])->name('create.class');
+Route::post('store/class',[App\Http\Controllers\Admin\CategoryController::class,'store'])->name('store.class');
+
+
+
 
 // Route::view('/contact','contact');
 
