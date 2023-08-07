@@ -41,4 +41,30 @@ class CategoryController extends Controller
     	DB::table('class')->insert($data);
     	return view('admin.class.index');
     }
+    public function delete($id)
+    {
+        DB::table('class')->where('id',$id)->delete();
+        return redirect()->back();
+    }
+
+    public function edit($id)
+    {
+        $data=DB::table('class')->where('id',$id)->first();
+        return view('admin.class.edit',compact('data'));
+    }
+
+    public function update(Request $request,$id)
+    {
+       $validatedData = $request->validate([
+                'class_name' => ['required']
+                
+            ]);
+
+        $data= array(
+            'class_name'=>$request->class_name,
+         );
+        DB::table('class')->where('id',$id)->update($data);
+        return redirect()->route('class.index');
+    }
+  
 }

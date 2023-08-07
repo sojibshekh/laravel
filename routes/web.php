@@ -69,7 +69,9 @@ Route::get('laravel',function(){
 Route::get('class',[App\Http\Controllers\Admin\CategoryController::class,'index'])->name('class.index');
 Route::get('create/class',[App\Http\Controllers\Admin\CategoryController::class,'create'])->name('create.class');
 Route::post('store/class',[App\Http\Controllers\Admin\CategoryController::class,'store'])->name('store.class');
-
+Route::get('class/delete/{id}',[App\Http\Controllers\Admin\CategoryController::class,'delete'])->name('class.delete');
+Route::get('class/edit/{id}',[App\Http\Controllers\Admin\CategoryController::class,'edit'])->name('class.edit');
+Route::post('class/update/{id}',[App\Http\Controllers\Admin\CategoryController::class,'update'])->name('class.update');
 
 
 

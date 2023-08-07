@@ -22,6 +22,7 @@
                 			<tr>
                 				<td>{{++$key}}</td>
                 				<td>{{$row->class_name}}</td>
+								<td> <a href="{{ route('class.edit',$row->id) }}">edit</a> <a href="{{ route('class.delete',$row->id) }}">delete</a></td>
                 			</tr>
                 			@endforeach
                 		</tbody>
