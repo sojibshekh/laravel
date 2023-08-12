@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\learnController;
+use App\Http\Controllers\Admin\student;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,7 +51,7 @@ Route::get('/test',learnController::class);
 Route::post('/student/store',[FirstController::class,'studentStore'])->name('student.store');
 
 // from page 
-Route::get('student',[FirstController::class,'studentFrom'])->name('form.us');
+Route::get('/student',[FirstController::class,'studentFrom'])->name('formus');
 
 Route::post('store.contact',[FirstController::class,'store'])->name('store.contact');
 
@@ -73,6 +74,10 @@ Route::get('class/delete/{id}',[App\Http\Controllers\Admin\CategoryController::c
 Route::get('class/edit/{id}',[App\Http\Controllers\Admin\CategoryController::class,'edit'])->name('class.edit');
 Route::post('class/update/{id}',[App\Http\Controllers\Admin\CategoryController::class,'update'])->name('class.update');
 
+
+// student resource controller
+
+Route::resource('students',student::class);
 
 
 // Route::view('/contact','contact');
